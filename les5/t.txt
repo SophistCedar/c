@@ -1,3 +1,0 @@
-input the int value numerator i:
-input the int value denominator j:
-10/5=2
