@@ -10,4 +10,6 @@ les09: tcp/ip编程，改进代码，client断开后server还在运行。
 les10: memory 4 sectors   
 les11: struct memory allocation   
 les12: endian   
-les13: callback   
+les13: callback    
+les14: static link   
+les15: dynamic link   
