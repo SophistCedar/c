@@ -7,9 +7,9 @@ les06: gdb调试工具使用
 les07: shell学习    
 les08: tcp/ip编程，初级，client断开，server就不再工作;  
 les09: tcp/ip编程，改进代码，client断开后server还在运行。   
-les10: memory 4 sectors   
-les11: struct memory allocation   
-les12: endian   
-les13: callback    
-les14: static link   
-les15: dynamic link   
+les10: 内存四区模型memory 4 sectors   
+les11: 结构体成员内存对齐struct memory allocation   
+les12: 大小端测试endian   
+les13: 函数指针和回调函数callback    
+les14: 静态链表static link   
+les15: 动态链表dynamic link   
