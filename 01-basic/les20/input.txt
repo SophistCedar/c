@@ -1,8 +1,0 @@
-7
-austria 30 89 20
-japan 25 89 32
-india 29 95 21
-russia 30 90 23
-america 25 89 32
-china 30 100 56
-canada 30 89 60
