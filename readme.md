@@ -14,4 +14,5 @@ les13: 函数指针和回调函数callback
 les14: 静态链表static link   
 les15: 动态链表dynamic link  
 les16: 数组指针，指针数组，二维数组指针      
-les17: bubble sort    
+les17: bubble sort   
+les18: selection sort     
