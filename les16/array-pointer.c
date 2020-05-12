@@ -47,7 +47,7 @@ int main2(void)
 
    return 0;
 }
-//指针数组和字符串结合使用
+//指针数组和字符串结合使用  char s[10][80] 二维字符数组
 int main3(void)
 {
    char *str[3] = 
