@@ -2,7 +2,6 @@
 #include "max.h"
 #include "min.h"
 
-
 int main()
 {
     int a1 = 33;

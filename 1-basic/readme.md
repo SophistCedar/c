@@ -18,4 +18,7 @@ les17: bubble sort
 les18: selection sort   
 les19: string sort    
 les20: muti index string sort    
+les21: calculate the last word length in a string    
+les22: count a char in a string, ignore case    
+les23: set and sort    
   
