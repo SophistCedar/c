@@ -9,6 +9,7 @@ then
 else
     echo '两个数不相等！'
 fi
+
 # 字符串测试
 num1="ru1noob"
 num2="runoob"
@@ -18,6 +19,7 @@ then
 else
     echo '两个字符串不相等!'
 fi
+
 # 文件测试
 cd /bin
 if test -e ./bash
@@ -26,6 +28,7 @@ then
 else
     echo '文件不存在!'
 fi
+
 # 另外，Shell还提供了与( -a )、或( -o )、非( ! )三个逻辑操作符用于将测试条件连接起来，
 # 其优先级为："!"最高，"-a"次之，"-o"最低。例如：
 cd /bin

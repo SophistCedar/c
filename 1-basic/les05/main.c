@@ -1,5 +1,7 @@
 #include <stdio.h>
-
+//输入流 输出流 错误流
+//./a.out <input.txt 1>t.txt 2>f.txt
+//1是输出流，2是错误流
 int main()
 {
    int i,j;

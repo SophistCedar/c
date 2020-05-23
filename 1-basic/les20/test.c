@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 //第一行输入国家个数 N
-//
 //接下来 N 行分别输入字符串 金牌数 银牌数 铜牌数，空格分隔开的
 //要求输出排序后的字符串
 //排序要求  金牌数 银牌数 铜牌数 如果全部相同就按照字符串升序排序
@@ -36,7 +35,6 @@ int main(){
         printf("%-10s %-3d %-3d %-3d\n",name[i],G[i],S[i],B[i]);
     }
     printf("\n");
-
 
     int j;
     //bubble sort

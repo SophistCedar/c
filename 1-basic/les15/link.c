@@ -22,6 +22,7 @@ struct weapon * create(){
   //输入p1的用户数据
   scanf("%d,%d",&p1->price,&p1->atk);
   head = NULL;//此时链表为空
+  
   //动态链表结束的条件
   while(p1->price != 0){
     n++;//链表元素个数加1

@@ -76,6 +76,7 @@ void funtest3(){
 	printf("change i: u.c = %d, u.j = %d, u.i = %d\n",u.c,u.j,u.i);
 
 }
+
 int main()
 {
 	//测试大端和小端

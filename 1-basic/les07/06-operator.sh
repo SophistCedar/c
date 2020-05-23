@@ -86,13 +86,14 @@ else
 fi
 
 
-# 布尔运算符
+# 布尔运算符 ！= -a -o 
 if [ $a != $b ]
 then
    echo "$a != $b : a 不等于 b"
 else
    echo "$a == $b: a 等于 b"
 fi
+
 if [ $a -lt 100 -a $b -gt 15 ]
 then
    echo "$a 小于 100 且 $b 大于 15 : 返回 true"
@@ -138,18 +139,21 @@ then
 else
    echo "$a = $b: a 不等于 b"
 fi
+
 if [ $a != $b ]
 then
    echo "$a != $b : a 不等于 b"
 else
    echo "$a != $b: a 等于 b"
 fi
-if [ -z $a ]
+
+if [ -z $a ]#测试字符串长度是否为0
 then
    echo "-z $a : 字符串长度为 0"
 else
    echo "-z $a : 字符串长度不为 0"
 fi
+
 if [ -n "$a" ]
 then
    echo "-n $a : 字符串长度不为 0"
@@ -184,25 +188,25 @@ then
 else
    echo "文件不可执行"
 fi
-if [ -f $file ]
+if [ -f $file ]# -f 普通文件
 then
    echo "文件为普通文件"
 else
    echo "文件为特殊文件"
 fi
-if [ -d $file ]
+if [ -d $file ]# -d 是否是目录
 then
    echo "文件是个目录"
 else
    echo "文件不是个目录"
 fi
-if [ -s $file ]
+if [ -s $file ]# 文件是否为空
 then
    echo "文件不为空"
 else
    echo "文件为空"
 fi
-if [ -e $file ]
+if [ -e $file ]# 文件是否存在
 then
    echo "文件存在"
 else

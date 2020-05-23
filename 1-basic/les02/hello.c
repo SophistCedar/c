@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "max.h"
+#include "max.h"//多个 .c 文件如何处理
 #include "min.h"
 
 int main()

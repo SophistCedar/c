@@ -17,7 +17,7 @@ int Callback_3() // Callback Function 3
     printf("Hello, this is Callback_3\n ");
     return 0;
 }
-
+//把函数作为参数传递给另外一个函数使用
 int Handle(int (*Callback)())
 {
     printf("Entering Handle Function.\n ");

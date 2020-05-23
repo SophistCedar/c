@@ -1,4 +1,6 @@
 #include <stdio.h>
+//命令行参数 int argv   char *argc[]
+//默认情况喜爱，argv=1,argc[0]是可执行文件名称
 
 /*
 sophist@ubuntu:~/workspace/les3$ ls
@@ -34,7 +36,7 @@ int main(int argv, char *argc[])
 {
 
     printf("argv:%d\n",argv);
-    //argv是终端执行命令时，参数交互的，表示包括执行可执行文件，总共多少段。
+    //argv是输入参数的个数，终端执行命令时，参数交互的，表示包括执行可执行文件，总共多少段。
     int i;
     for(i=0;i<argv;i++){
       printf("argc[%d] is %s\n",i,argc[i]);

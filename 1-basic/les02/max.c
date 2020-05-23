@@ -5,5 +5,6 @@ int max(int a, int b)
     }else{
       return b;
     }
+    //return (a>b)? a:b
 }
 

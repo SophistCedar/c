@@ -1,4 +1,6 @@
 #!/bin/bash
+# echo 输出
+# read 输入
 echo "It is a test"
 echo It is a test
 

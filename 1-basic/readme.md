@@ -21,4 +21,5 @@ les20: muti index string sort
 les21: calculate the last word length in a string    
 les22: count a char in a string, ignore case    
 les23: set and sort    
+les24: 预处理 编译 汇编 链接
   
