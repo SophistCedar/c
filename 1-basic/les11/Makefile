@@ -1,10 +1,27 @@
-CFLAGS = -g -Wall
-.PHONY:all
-all:struct.out struct2.out
-struct.out:struct.c
-	gcc $(CFLAGS) $^ -o $@
-struct2.out:struct2.c
-	gcc $(CFLAGS) $^ -o $@
-.PHONY:clean
+CC = gcc
+CFLAGS = -g
+INCLUDES = .
+VPATH = $(INCLUDES)
+II_INCLUDES = $(addprefix -I,$(INCLUDES))
+src = $(wildcard *.c)
+objs = $(patsubst %.c,%.o,$(src))
+
+#EXEONLYONE = 1
+ifdef EXEONLYONE
+main:$(objs)
+	$(CC) $(CFLAGS) $(II_INCLUDES) $^ -o $@
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+.PHONY: clean
 clean:
-	rm *.out
+	rm *.o main
+else
+exe = $(patsubst %.c,%,$(src))
+all:$(exe)
+%:%.c
+	$(CC) $(CFLAGS) $(II_INCLUDES) $^ -o $@
+.PHONY: clean
+clean:
+	rm $(exe) 
+endif
+

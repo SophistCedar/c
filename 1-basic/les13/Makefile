@@ -1,13 +1,27 @@
-#this is Makefile
-CFLAGS = -g -Wall
-.PHONY:all
-all:callback2.out callback1.out callback3.out
-callback1.out:callback1.c
-	gcc $(CFLAGS) $^ -o $@
-callback2.out:callback2.c
-	gcc $(CFLAGS) $^ -o $@
-callback3.out:callback3.c
-	gcc $(CFLAGS) $^ -o $@
-.PHONY : clean
-clean :
-	rm *.out
+CC = gcc
+CFLAGS = -g
+INCLUDES = .
+VPATH = $(INCLUDES)
+II_INCLUDES = $(addprefix -I,$(INCLUDES))
+src = $(wildcard *.c)
+objs = $(patsubst %.c,%.o,$(src))
+
+#EXEONLYONE = 1
+ifdef EXEONLYONE
+main:$(objs)
+	$(CC) $(CFLAGS) $(II_INCLUDES) $^ -o $@
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+.PHONY: clean
+clean:
+	rm *.o main
+else
+exe = $(patsubst %.c,%,$(src))
+all:$(exe)
+%:%.c
+	$(CC) $(CFLAGS) $(II_INCLUDES) $^ -o $@
+.PHONY: clean
+clean:
+	rm $(exe) 
+endif
+

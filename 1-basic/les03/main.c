@@ -2,35 +2,6 @@
 //命令行参数 int argv   char *argc[]
 //默认情况喜爱，argv=1,argc[0]是可执行文件名称
 
-/*
-sophist@ubuntu:~/workspace/les3$ ls
-main.c
-sophist@ubuntu:~/workspace/les3$ cc main.c 
-sophist@ubuntu:~/workspace/les3$ ls
-a.out  main.c
-sophist@ubuntu:~/workspace/les3$ ./a.out 
-argv:1
-argc[0] is ./a.out
-hello world!
-sophist@ubuntu:~/workspace/les3$ ./a.out -l
-argv:2
-argc[0] is ./a.out
-argc[1] is -l
-hello world!
-sophist@ubuntu:~/workspace/les3$ ./a.out -l -a
-argv:3
-argc[0] is ./a.out
-argc[1] is -l
-argc[2] is -a
-hello world!
-sophist@ubuntu:~/workspace/les3$ ./a.out -l -a -csbjcbs
-argv:4
-argc[0] is ./a.out
-argc[1] is -l
-argc[2] is -a
-argc[3] is -csbjcbs
-hello world!
-*/
 
 int main(int argv, char *argc[])
 {

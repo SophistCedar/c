@@ -1,14 +1,27 @@
-#this is Makefile
-.PHONY:all
-all:data.out stack.out heap.out main.out
-data.out:data.c
-	gcc -g data.c -o data.out
-stack.out:stack.c
-	gcc -g stack.c -o stack.out
-heap.out:heap.c
-	gcc -g heap.c -o heap.out
-main.out:main.c
-	gcc -g main.c -o main.out
-.PHONY : clean
-clean :
-	rm *.out
+CC = gcc
+CFLAGS = -g
+INCLUDES = .
+VPATH = $(INCLUDES)
+II_INCLUDES = $(addprefix -I,$(INCLUDES))
+src = $(wildcard *.c)
+objs = $(patsubst %.c,%.o,$(src))
+
+#EXEONLYONE = 1
+ifdef EXEONLYONE
+main:$(objs)
+	$(CC) $(CFLAGS) $(II_INCLUDES) $^ -o $@
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+.PHONY: clean
+clean:
+	rm *.o main
+else
+exe = $(patsubst %.c,%,$(src))
+all:$(exe)
+%:%.c
+	$(CC) $(CFLAGS) $(II_INCLUDES) $^ -o $@
+.PHONY: clean
+clean:
+	rm $(exe) 
+endif
+
