@@ -1,0 +1,8 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias poweroff='shutdown -h now'
+alias g='gvim'
+alias vi='vim'
+alias rm='rm -i'
+alias cp='cp -i'

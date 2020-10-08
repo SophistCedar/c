@@ -8,10 +8,8 @@
 
 " Save 1,000 items in history
 set history=1000
-
 " reload files when changed on disk
 set autoread                  
-
 " Show the line and column number of the cursor position
 set ruler
 " Turn on line numbering
@@ -20,13 +18,10 @@ set number
 set showcmd
 " Display current mode
 set showmode
-
 " Display completion matches on your status line
 set wildmenu
-
 " Show a few lines of context around the cursor
 set scrolloff=5
-
 " Highlight search matches
 set hlsearch
 " Enable incremental searching
@@ -35,43 +30,76 @@ set incsearch
 set ignorecase
 " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set smartcase
-
-
 " set title
-
 " Turn on file backups
 " set backup
-
 " Don't line wrap mid-word.
 set lbr
-
 " Copy the indentation from the current line.
 set autoindent
 " Enable smart autoindenting.
 set smartindent
-
 " Use spaces instead of tabs
 set expandtab
 " Enable smart tabs
 set smarttab
-
 " Make a tab equal to 4 spaces
 set shiftwidth=4
 set tabstop=4
-
 " highlight position of current cursor
 set cursorcolumn
 set cursorline
-
 " Specifiy a color scheme.
-colorscheme slate
+colorscheme elflord
+" colorscheme slate
+" colorscheme murphy 
+
+" show match brackets and highlight
+set showmatch
+
+" Have the mouse enabled all the time
+set mouse=a
+" enable mouse selection anywhere
+set selection=exclusive
+" enable mouse selection anywhere
+set selectmode=mouse,key
+
+" change the current working directory
+set autochdir
+
+
+syntax on
+filetype plugin on
+filetype indent on
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+"自动实例括号
+"""""""""""""""""""""""""""""""""""""""""""
+inoremap ( ()<ESC>i
+inoremap ) <c-r>=ClosePair(')')<CR>
+inoremap { {}<ESC>i
+inoremap } <c-r>=ClosePair('}')<CR>
+inoremap [ []<ESC>i
+inoremap ] <c-r>=ClosePair(']')<CR>
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+function ClosePair(char)
+ if getline('.')[col('.') - 1] == a:char
+  return "\<Right>"
+ else
+  return a:char
+ endif
+endf
+
 
 
 "  standard editor shorts in vim"
 " comment # line shortcut"
-map <C-M> I# <ESC>
+" nnoremap <C-M> I# <ESC>
 " comment // shortcut"
-map <S-M> I// <ESC>
+" nnoremap <S-M> I// <ESC>
 " select all"
 " map <C-a> GVgg
 " new file"
@@ -125,9 +153,11 @@ map <F4> <Esc>o<li></li><Esc>cit
 " change the mapleader from \ to ,
 " NOTE: This has to be set before <leader> is used.
 let mapleader=","
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
 
 " Quickly save your file.
-map <leader>w :w!<cr>
+" map <leader>w :w!<cr>
 
 " For more options see ":help option-list" and ":options".
 
@@ -149,7 +179,3 @@ Plug 'valloric/youcompleteme'
 
 " Initialize plugin system
 call plug#end()
-
-filetype on
-filetype plugin on
-filetype indent on
